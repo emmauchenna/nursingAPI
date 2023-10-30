@@ -35,13 +35,13 @@ public class NextOfKinController {
         int i = nextOfKinService.saveNextOfKin(nextOfKin);
         return new ResponseEntity<>(i, HttpStatus.CREATED);
     }
-
+/**
     @PutMapping(value = "/update/{id}")
     public ResponseEntity<Object> updateNextOfKin2(@RequestBody NewNextOfKin nextOfKin, @PathVariable int id){
         int i = nextOfKinService.updateNextOfKin(nextOfKin, id);
         return new ResponseEntity<>(i, HttpStatus.CREATED);
     }
-
+**/
     @RequestMapping(value = "/update/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Object> updateNextOfKin(@RequestBody NewNextOfKin nextOfKin, @PathVariable int id){
         int i = nextOfKinService.updateNextOfKin(nextOfKin, id);
